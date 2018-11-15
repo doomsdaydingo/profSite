@@ -1,8 +1,60 @@
 <html>
   <head>
     <title> Ethan A. Pinsker </title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div id="container">
+		<div id="header">
+			<h1> Hi I'm Ethan </h1>
+		</div>
+		<div id="content">
+			<div id="nav">
+				<h3>Navigation</h3>
+				<ul>
+					<li><a class="selected" href="">About</a></li>
+					<li><a href="">Current Work</a></li>
+					<li><a href="">Education</a></li>
+					<li><a href="">Personal Projects & Art</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				<h2> Welcome </h2>
+				<p>My name is Ethan A. Pinsker and this is my web page. If we've met before, thank you for taking the time to learn about my professional passions. Else, if this is how I'm meeting you, I hope you are inspired by what inspires me!</p>
+			</div>
+			<div id="CurWrk">
+				<h2>Researcher: NASA Ames Research Center/Bay Area Enviornmental Research Center</h2>
+				<p>For about the last two years I have been leading and participating in various roles on the NASA Airborne Science Program.</p>
+				<script>
+					var a = document.createElement('a');
+					var linkText = document.createTextNode("Link to instrument/MASTER");
+					a.appendChild(linkText);
+					a.title = "instrument/MASTER";
+					a.href = "https://airbornescience.nasa.gov/instrument/MASTER";
+					document.body.appendChild(a);
+				</script>
+				<script>
+					var a = document.createElement('a');
+					var linkText = document.createTextNode("Link to instrument/eMAS");
+					a.appendChild(linkText);
+					a.title = "instrument/eMAS";
+					a.href = "https://airbornescience.nasa.gov/instrument/eMAS";
+					document.body.appendChild(a);
+				</script>
+				<script>
+					var a = document.createElement('a');	//maybe this just explains SATCOM
+					var linkText = document.createTextNode("link to SATCOM");
+					a.appendChild(linkText);
+					a.title = "SATCOM";
+					a.href = "https://airbornescience.nasa.gov/content/SATCOM_Requirements_and_Costing";
+					document.body.appendChild(a);
+				</script>
+			</div>
+		</div>
+		<div id="footer">
+			OrIgInAl PaGe &copy; do not steel
+		</div>
+	</div>	
   </body>
 </html>
