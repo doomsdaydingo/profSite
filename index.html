@@ -1,0 +1,273 @@
+<html>
+  <head>
+    <title> Ethan A. Pinsker </title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  
+<script src='node_modules/chart.js/dist/Chart.min.js'></script>		<!--Pull javascript fuctions from a javascript file in that directory-->
+<script src='node_modules/jquery/dist/jquery.min.js'></script>		<!--Pull jquery fuctions from a javascript file in that directory-->
+
+  
+  
+  <body>
+    <div id="container">
+		<div id="header">
+			<h1> Hi I'm Ethan </h1>
+		</div>
+		<div id="content">
+			<div id="nav">
+				<h3>Navigation</h3>
+				<ul>
+					<li><a class="selected" href="#welcome">About</a></li>
+					<li><a href="#currentwork">Current Work</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#other">Publication & Other</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<div id="main" name="welcome">
+				<h2> Welcome </h2>
+				<p>My name is Ethan A. Pinsker and this is my web page. </br> If we've 
+				met before, thank you for taking the time to learn about my professional
+				passions. </br> Else, if this is how I'm meeting you, I hope you are 
+				inspired by what inspires me!</p>
+			</div>
+			<div id="CurWrk" name="currentwork">
+				<a name="currentwork"></a><h2>Current Work</h2>
+				<p>Since January 2017 I have been employed by Bay Area Environmental
+				Research Institute, to be a researcher for NASA Ames Research Center,
+				Earth Science Division. The group I do research for at NASA is called
+				the Airborne Science Program. Two instruments my team work on the most are the 
+				<a href="https://airbornescience.nasa.gov/instrument/MASTER" target="_blank"><u><i>MASTER</i></u></a>
+				and <a href="https://airbornescience.nasa.gov/instrument/eMAS" target="_blank"><u><i>eMAS</i></u></a> Spectrometers.
+				These instruments use infared imaging sensors to study Earth's surface
+				properties and usually fly on a 
+				<a href="https://www.nasa.gov/centers/armstrong/aircraft/ER-2/index.html" target="_blank"><u><i>ER-2</i></u></a> aircraft.
+				My daily tasks cover much more than research, my responsibilities include:</p>
+				<h4>Iridium modem integration for NASA Airborne Science Data and Telemetry System</h4>
+				<p>I am currently working with another engineer on our team to construct
+				and test the next generation of a science instrument that utilizes iridium sat-phone 
+				<a href="https://airbornescience.nasa.gov/content/SATCOM_Requirements_and_Costing" target="_blank"><u><i>modems</i></u></a>
+				for navigation data recording. I have hardware and software
+				tasks for this instrument. Following a schematic and machined enclosure,
+				I had to construct the instrument so the modems and other essential
+				parts would logistically fit while also properly crimping the wire connections to 
+				thier appropriate mate. As for the software I use AT commands in Minicom
+				to configure and troubleshoot the modems on this instrument. I love this
+				kind of work because I am participating in a new innovation for airborne
+				science.</p>
+				<h4>Board design in Altium Designer </h4>
+				<p>Sometimes following a schematic other times using my own designs, 
+				I place components on the board and route their nets so they can be 
+				fabricated through a vendor. I also test all of the boards that we 
+				receive from vendors. Some boards I route have hundreds of components 
+				or require components that are not in any Altium Library. If I can not 
+				find the schematic symbol or footprint for a part, I have to make my own. 
+				If you also have a copy of Altium 17 or later, use these links if you 
+				want to download and take a look at some of the </br>
+				<a href="downloads/1EPINSKER.SchLib" download><u><i>Symbols</i></u></a>
+				and 
+				<a href="downloads/1EPINSKER.PcbLib" download><u><i>Footprints</i></u></a>
+				I have made in Altium. Routing and solving the best way to place 
+				components on a board is fulfilling to me when I see the finished 
+				physical product that I fabricated.</p>
+				<h4>Lead Firmware Designer</h4>
+				<p>I design the firmware for our ARM7 TDMI microcontrollers that we use 
+				on multiple instruments. These microcontrollers use RS-422 serial 
+				communication with the instrument they operate on. C is one of my 
+				favorite languages to code in; if you want see some more work I have 
+				done in C, you should check out my <a href="#EE"><u><i>previous work</i></u></a>.</p>
+				<h4>PostgreSQL database design and Ground station interface with HTML5/Javascript/php (need to put in html and postgres stuff for chart)</h4>
+				<p>I am in charge making changes to each of our flight databases. 
+				I have also made an interface with chart.js so anyone on our network 
+				can monitor some of our instrument's parameters during a flight. Check 
+				out the simplified version below! This is another great 
+				part of my job because to a professional degree, I get to show some of 
+				my creative side!</p>
+				<canvas id="myChart" width="40" height="10"></canvas>
+				<button onclick="newDataSet()">New Random Data Set</button>
+				<button onclick="deleteDataPoint('activeDatasets')">Delete Data Set</button>
+				<input id="HOLD" type="button" value="Pause" onclick="brakes()"></input>
+			</div>
+			</br>
+			</br>
+			<div>
+				<a name="education"></a><h2>Education</h2>
+				<p>I received both of my bachelor degrees at the University of California, 
+				Santa Cruz. I wanted to graduate with a background in software and hardware 
+				so I majored in Network & Digital Technology and Electrical Engineering. 
+				Working in either discipline satisfies me, and being a part of how they 
+				weave together makes me proud of what I accomplish. </p>
+				<h4>Network and Digital Technology</h4>
+				<p>My senior design project for this major was to design a way to setup 
+				a duplex 256 AES encryption link using only common off the shelf parts 
+				(COTS). I was partnered with two other engineering students in my class 
+				who had similar backgrounds. Our final design relied on using a 
+				<a href="downloads/ADS-AMWx06-A1x-100R-1117995.pdf" download><u><i>AMW006-A1U 'Hopper -U'</i></u></a>
+				to send the packets and Raspberry Pi 3 to interpret the packets. </p>
+				<a name="EE"></a><h4>Electrical Engineering</h4>
+				<p>My senior design project for this major was an annually held class 
+				called Intro to Mechatronics. I was partnered with two other engineering 
+				students on a six week project to build bot that could navigate through 
+				a maze autonomously and retreive a disk using bump sensors, tape sensors, 
+				an infrared receiver and a detector for a track wire that was set along 
+				the perimeter of the maze. Check out this video of our bot, all of the 
+				software was written by us in C on a PIC32MX microcontroller:</p>	
+				<video width = "500" height = "300" controls>
+				<source src = "Thrashbot MLG.mp4" type = "video/mp4">
+				This browser doesn't support video tag.
+				</video>
+			</div>
+			</br>
+			</br>
+			<div>
+				<a name="other"></a><h2>Publication & Other</h2>
+				<p>This section is for any other work I'd like to mention.  May or 
+				may not be work or engineering related, but they are things that 
+				I'm proud of. </p>
+				<h4>Publication</h4>
+				<p>In 2016, at my first job at NASA, I worked on a team to refurbish 
+				RQ-11 UAV aircrafts for scientific instrumentation. During my time 
+				on this project we made some discoveries on using 3D printing and 
+				scanning software with the aircraft. We documented what we found 
+				and our paper is now published (I'm a co-author) by The International 
+				Society for Optics and Photonics (SPIE). You can purchase a copy 
+				<a href="https://spie.org/Publications/Proceedings/Paper/10.1117/12.2253068" target="_blank"><u><i>here</i></u></a>.
+				</p>
+				<img src="WatchRev007.jpg" alt="Revison0.07" width="150" height="150">
+				<h4>Arduino Watch</h4>
+				<p>I built a watch with an Ardunio micro and a 4 digit 7 hex display. 
+				The watch was powered by a single 9-Volt battery which was linearly 
+				regulated. Although bulky, it was bright enough to act as a 24/7 
+				flashlight too. I've made some revisions since the picture shown here, 
+				the most current revision is made to operate as a desk clock. </p>
+				<h4>Art</h4>
+				<p>I like to draw goofy things and write hard sci-fi too. If you want 
+				to see some of the sketches I've done, you can check them out  
+				<a href="https://www.furaffinity.net/user/doomsdaydingo/" target="_blank"><u><i>here</i></u></a>. 
+				I haven't published any of my stories, I'm currently working on three 
+				at the moment. </p>
+			</div>
+			</br>
+			</br>
+			<div>
+				<a name="contact"></a><h2>Contact</h2>
+				<p>If you want a copy of my resume you can download it 
+				<a href="downloads/EthanAndreP.pdf" download><u><i>here</i></u></a>. 
+				</br>Thanks for taking the time to read my page. I appreciate your interest 
+				in some of the things that make me interesting.</p>
+			</div>
+		</div>
+		<div id="footer">
+			Ethan A. Pinsker &copy;
+		</div>
+	</div>	
+  </body>
+  
+  
+  
+	<body>
+	<script>
+	/******************************************************************************	Chart Setup	******************************************************************************/
+	var canvas = document.getElementById("myChart");	//makes a variable called canvas that refers to the < canvas></canvas> section called "myChart"
+	var data = {						//makes a struct like variable called "data". "data" has parts "labels" and "datasheets"
+		labels: ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",],	//labels for x-axis
+		datasets: [	//Each dataset of datasets has its own variables that determine how the data shows up
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(230,0,0,1)",		backgroundColor:"rgba(150,0,0,0.5)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(255,127,0,1)",	backgroundColor:"rgba(255,127,0,0.5)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(32,32,32,1)",		backgroundColor:"rgba(255,255,0,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(195,195,0,1)",	backgroundColor:"rgba(0,100,0,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(0,0,0,1)",		backgroundColor:"rgba(0,242,0,0.8)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(10,155,155,1)",	backgroundColor:"rgba(0,255,255,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(50,50,125,1)",	backgroundColor:"rgba(0,0,153,0.5)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(50,50,125,1)",	backgroundColor:"rgba(178,102,255,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(102,0,204,1)",	backgroundColor:"rgba(204,0,204,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(255,102,178,1)",	backgroundColor:"rgba(255,204,229,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(102,51,0,1)",		backgroundColor:"rgba(102,51,0,0.7)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(0,0,0,1)",		backgroundColor:"rgba(255,255,255,0.5)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(255,0,0,1)",		backgroundColor:"rgba(128,128,128,0.9)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(0,255,0,1)",		backgroundColor:"rgba(128,128,128,0.9)",},
+			{label:"", fill:false, hidden:1, data:[], pointRadius:5, lineTension:0, borderColor:"rgba(0,0,255,1)",		backgroundColor:"rgba(128,128,128,0.9)",},
+		]
+	};
+	var myLineChart = Chart.Line(canvas, { //this creates the chart called "myChart" in the canvas section called "canvas"
+		animationSteps: 60,	//slows animation speed
+		data: data,		//sets the data we made to be the chart data	
+		options: {		//change options
+			legend: {		//change legend
+				position: 'right',	//puts legend on bottom
+				labels: {	//change labels in the legend
+					boxWidth: 15,	//label box was too big
+				}
+			}
+		}
+	});
+	/******************************************************************************	/Chart Setup 	******************************************************************************/
+	var set = 0;
+	var pts = 0;
+	var q = 0;
+	var labelArray = new Array(15);	//Array to hold the labels the user selects
+	setInterval(addMOARdata, 1000);	//Add data every second
+	function addMOARdata(){
+		if(document.getElementById("HOLD").value == "Pause"){
+			if(pts<21){
+				var time = new Date();  //set variable as the most recent date(time). I think Date() is a built in javascript fuction
+				myLineChart.data.labels[pts] = time.getHours()+":"+time.getMinutes()+":"+time.getSeconds(); //sets labels by the new "time" variable
+				for(q = 0; q < 15; q++){
+					if(labelArray[q] != null){
+						myLineChart.data.datasets[q].data[pts] = Math.random() * 100;
+					}
+				}
+				pts++;
+			}
+			else{
+				for(j = 0; j < 15; j++){		//for all 15 variables
+					for (i = 0; i < 20; i++){	//move all the points back one
+						myLineChart.data.datasets[j].data[i] = myLineChart.data.datasets[j].data[i+1];	//move data left
+					}
+					if(labelArray[j] != null){
+							myLineChart.data.datasets[j].data[20] = Math.random() * 100;
+					}
+				}
+				for(i = 0; i < 19; i++) myLineChart.data.labels[i] = myLineChart.data.labels[i+1];		//move labels
+				var time = new Date();
+				myLineChart.data.labels[19] = time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();	//add new time label
+			}
+		}
+			myLineChart.update();
+	}
+
+	function brakes(){	//toggle whether take new data
+		var pedal = document.getElementById("HOLD");
+		if(pedal.value == "Play")pedal.value = "Pause";
+		else pedal.value = "Play";
+	}
+
+	//Constructs a string that can query a specific variable's value in a specific table
+	function newDataSet(){
+		labelArray[set] = set;
+		myLineChart.data.datasets[set].label = set + 1;
+		myLineChart.data.datasets[set].hidden = 0;
+		set++;
+	}
+
+	//Deletes the label and data for a dataset
+	function deleteDataPoint(DseLect){
+		myLineChart.data.datasets[set-1].hidden = 1;		//make hidden
+		myLineChart.data.datasets[set-1].label = "";		//remove label
+		for(j=0;j<20;j++){					//remove the data points
+			myLineChart.data.datasets[set-1].data[j] = "undefined";	
+		}
+		labelArray[set-1] = null;	//set this string to null so we can't read this query anymore
+		set--;
+		myLineChart.update();
+	}
+
+
+</script>
+</body>
+  
+  
+  
+  
+</html>
